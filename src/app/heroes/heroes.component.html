@@ -1,0 +1,7 @@
+<h2>Heroes List</h2>
+  <ul class="heroes">
+    <li *ngFor="let hero of hero_list" (click)="setHero(hero)" [class.selected]="hero === selectedHero">
+      <span class="badge">{{hero.id}}</span> {{hero.full_name()}}
+    </li>
+  </ul>
+<app-hero-details [hero]="selectedHero"></app-hero-details>
